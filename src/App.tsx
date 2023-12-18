@@ -13,10 +13,10 @@ function App() {
       <div className="main">
         <NavBar />
         <div className="container flex">
-          <div className="menuContainer w-15rem py-2 px-3">
+          <div className="menuContainer w-15rem py-2 px-3 border-right-2 border-black-alpha-10">
             <Menu />
           </div>
-          <div className="contentContainer">
+          <div className="contentContainer w-15rem py-2 px-3 w-full">
             <Outlet />
           </div>
         </div>
