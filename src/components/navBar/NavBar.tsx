@@ -1,4 +1,3 @@
-import logo from "../../assets/logo.webp";
 import profile from "../../assets/profile.png";
 import { Button } from "primereact/button";
 import "./navbar.css";
@@ -6,11 +5,7 @@ import "./navbar.css";
 const NavBar = () => {
   return (
     <>
-      <div className="navbar w-full p-3 flex align-items-center justify-content-between">
-        <div className="logo flex align-items-center font-semibold gap-1">
-          <img src={logo} alt="Admin Panel Logo" className="w-3rem h-3rem" />
-          <span>Swiftly</span>
-        </div>
+      <div className="navbar w-full flex align-items-center justify-content-end">
         <div className="icons flex align-items-center gap-3">
           <div className="user flex align-items-center gap-2">
             <img

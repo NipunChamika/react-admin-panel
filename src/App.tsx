@@ -10,17 +10,21 @@ import "./styles/global.css";
 function App() {
   const Layout = () => {
     return (
-      <div className="main">
-        <NavBar />
-        <div className="container flex">
-          <div className="menuContainer w-15rem py-2 px-3 border-right-2 border-black-alpha-10">
-            <Menu />
+      <div className="main flex h-screen">
+        <div className="menuContainer w-18rem bg-white border-right-2 border-black-alpha-10 py-2 px-2">
+          <Menu />
+        </div>
+        <div className="container w-full py-3 px-4">
+          <div className="headerContainer pb-4">
+            <NavBar />
           </div>
-          <div className="contentContainer w-15rem py-2 px-3 w-full">
+          <div className="contentContainer w-full pb-4">
             <Outlet />
           </div>
+          <div className="footerContainer ">
+            <Footer />
+          </div>
         </div>
-        <Footer />
       </div>
     );
   };
