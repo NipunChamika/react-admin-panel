@@ -18,11 +18,13 @@ function App() {
           <div className="headerContainer pb-4">
             <NavBar />
           </div>
-          <div className="contentContainer w-full pb-4">
-            <Outlet />
-          </div>
-          <div className="footerContainer ">
-            <Footer />
+          <div className="outletFooterContainer flex flex-column justify-content-between">
+            <div className="contentContainer w-full pb-4 relative">
+              <Outlet />
+            </div>
+            <div className="footerContainer absolute bottom-0">
+              <Footer />
+            </div>
           </div>
         </div>
       </div>
