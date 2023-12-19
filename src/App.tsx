@@ -11,10 +11,10 @@ function App() {
   const Layout = () => {
     return (
       <div className="main flex h-screen">
-        <div className="menuContainer w-18rem bg-white border-right-2 border-black-alpha-10 py-2 px-2">
+        <div className="menuContainer w-18rem bg-white border-right-2 border-black-alpha-10 p-3">
           <Menu />
         </div>
-        <div className="container w-full py-3 px-4">
+        <div className="container w-full py-4 px-4">
           <div className="headerContainer pb-4">
             <NavBar />
           </div>
