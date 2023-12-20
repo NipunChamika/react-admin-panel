@@ -11,21 +11,25 @@ const Menu = () => {
         </div>
         <div className="itemContainer flex flex-column gap-3">
           <div className="item flex flex-column gap-2">
-            <span className="title text-sm">DASHBOARD</span>
+            <span className="title text-sm text-gray-500 font-medium">
+              DASHBOARD
+            </span>
             <Link to={"/"} className="no-underline">
               <div className="flex flex-row align-items-center gap-3 py-2 px-3 hover:bg-gray-200 text-base border-round-xl">
-                <i className="pi pi-home text-gray-500"></i>
-                <span className="text-black-alpha-90">Home</span>
+                <i className="pi pi-home text-gray-700"></i>
+                <span className="text-gray-800">Home</span>
               </div>
             </Link>
           </div>
 
           <div className="item flex flex-column gap-2">
-            <span className="title text-sm">PAGES</span>
+            <span className="title text-sm text-gray-500 font-medium">
+              PAGES
+            </span>
             <Link to={"/users"} className="no-underline">
               <div className="flex flex-row align-items-center gap-3 py-2 px-3 hover:bg-gray-200 text-base border-round-xl">
-                <i className="pi pi-users text-gray-500"></i>
-                <span className="text-black-alpha-90">Users</span>
+                <i className="pi pi-users text-gray-700"></i>
+                <span className="text-gray-800">Users</span>
               </div>
             </Link>
           </div>
