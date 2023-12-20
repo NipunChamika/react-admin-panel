@@ -6,11 +6,15 @@ import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.css";
+import { UserContext } from "./contexts/context";
+import { useState } from "react";
 
 function App() {
+  const [editUser, setEditUser] = useState(false);
+
   const Layout = () => {
     return (
-      <div className="main flex h-screen">
+      <div className="main flex ">
         <div className="menuContainer w-3 bg-white border-right-2 border-black-alpha-10 p-3">
           <Menu />
         </div>
@@ -19,10 +23,10 @@ function App() {
             <NavBar />
           </div>
           <div className="outletFooterContainer flex flex-column justify-content-between">
-            <div className="contentContainer w-full pb-4 relative">
+            <div className="contentContainer w-full pb-4">
               <Outlet />
             </div>
-            <div className="footerContainer absolute bottom-0">
+            <div className="footerContainer">
               <Footer />
             </div>
           </div>
@@ -54,7 +58,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <UserContext.Provider value={{ editUser, setEditUser }}>
+        <RouterProvider router={router} />
+      </UserContext.Provider>
     </>
   );
 }
