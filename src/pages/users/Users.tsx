@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Button } from "primereact/button";
 import { UserContext } from "../../contexts/context";
+import UserDialog from "../../components/userDialog/UserDialog";
 
 type User = {
   id: number;
@@ -26,7 +27,7 @@ const Users = () => {
     return null;
   }
 
-  const { editUser, setEditUser } = userContext;
+  const { setEditUser } = userContext;
 
   const [users, setUsers] = useState([]);
 
@@ -95,9 +96,9 @@ const Users = () => {
     console.log("Delete user ID: ", userId);
   };
 
-  useEffect(() => {
-    console.log("Current value of editUser in context:", userContext.editUser);
-  }, [userContext.editUser]);
+  // useEffect(() => {
+  //   console.log("Current value of editUser in context:", userContext.editUser);
+  // }, [userContext.editUser]);
 
   return (
     <>
@@ -110,6 +111,7 @@ const Users = () => {
             <Column field="email" header="Email"></Column>
             <Column header="Action" body={actionBodyTemplate}></Column>
           </DataTable>
+          <UserDialog />
         </Card>
       </div>
     </>
