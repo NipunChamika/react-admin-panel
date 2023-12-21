@@ -104,7 +104,10 @@ const Users = () => {
     <>
       <div className="contentContainer flex flex-column gap-4">
         <div className="titleContainer text-3xl font-semibold">Users</div>
-        <Card className="border-round-2xl border-none shadow-1 px-3">
+        <Card
+          className="border-round-2xl border-none px-3"
+          style={{ boxShadow: "rgba(90, 114, 123, 0.11) 0px 7px 30px 0px" }}
+        >
           <DataTable value={users} tableClassName="text-sm">
             <Column field="firstName" header="First Name"></Column>
             <Column field="lastName" header="Last Name"></Column>

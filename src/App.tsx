@@ -21,7 +21,10 @@ function App() {
     return (
       <div className="main flex ">
         {isMenuVisible && (
-          <div className="menuContainer w-3 bg-white border-right-2 border-black-alpha-10 p-3">
+          <div
+            className="menuContainer w-3 bg-white border-none p-2"
+            style={{ boxShadow: "rgba(113, 122, 131, 0.11) 0px 7px 30px 0px" }}
+          >
             <Menu />
           </div>
         )}
@@ -29,14 +32,14 @@ function App() {
           <div className="headerContainer pb-4">
             <NavBar />
           </div>
-          <div className="outletFooterContainer flex flex-column justify-content-between">
-            <div className="contentContainer w-full pb-4">
-              <Outlet />
-            </div>
-            <div className="footerContainer">
-              <Footer />
-            </div>
+          {/* <div className="outletFooterContainer flex flex-column justify-content-between"> */}
+          <div className="contentContainer w-full px-2 py-2">
+            <Outlet />
           </div>
+          <div className="footerContainer px-2 pt-4">
+            <Footer />
+          </div>
+          {/* </div> */}
         </div>
       </div>
     );

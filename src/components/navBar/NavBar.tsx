@@ -23,10 +23,10 @@ const NavBar = () => {
       <div className="navbar w-full flex align-items-center justify-content-between">
         <div className="menuCollapser">
           <Button
-            icon="pi pi-bars"
+            icon="pi pi-bars text-xl text-gray-600 hover:bg-bluegray-50"
             rounded
             text
-            className="icon text-gray-600 hover:bg-bluegray-50"
+            className="icon"
             onClick={toggleMenu}
           />
         </div>
@@ -40,10 +40,10 @@ const NavBar = () => {
             <span>Nipun</span>
           </div>
           <Button
-            icon="pi pi-cog"
+            icon="pi pi-cog text-xl text-gray-600 hover:bg-bluegray-50"
             rounded
             text
-            className="icon text-gray-600 hover:bg-bluegray-50"
+            className="icon"
           />
           {/* <i className="icon pi pi-cog"></i> */}
         </div>

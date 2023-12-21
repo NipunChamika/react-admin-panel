@@ -9,7 +9,7 @@ const Menu = () => {
           <img src={logo} alt="Admin Panel Logo" className="w-4rem h-4rem" />
           <span>Swiftly</span>
         </div>
-        <div className="itemContainer flex flex-column gap-3">
+        <div className="itemContainer flex flex-column gap-3 p-3">
           <div className="item flex flex-column gap-2">
             <span className="title text-sm text-gray-500 font-medium">
               DASHBOARD
