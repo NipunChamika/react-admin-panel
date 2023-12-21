@@ -7,17 +7,24 @@ import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.css";
 import { UserContext } from "./contexts/context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [editUser, setEditUser] = useState(false);
+  const [isMenuVisible, setMenuVisible] = useState(true);
+
+  useEffect(() => {
+    console.log(isMenuVisible);
+  }, [isMenuVisible]);
 
   const Layout = () => {
     return (
       <div className="main flex ">
-        <div className="menuContainer w-3 bg-white border-right-2 border-black-alpha-10 p-3">
-          <Menu />
-        </div>
+        {isMenuVisible && (
+          <div className="menuContainer w-3 bg-white border-right-2 border-black-alpha-10 p-3">
+            <Menu />
+          </div>
+        )}
         <div className="container w-full py-4 px-4">
           <div className="headerContainer pb-4">
             <NavBar />
@@ -58,7 +65,9 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ editUser, setEditUser }}>
+      <UserContext.Provider
+        value={{ editUser, setEditUser, isMenuVisible, setMenuVisible }}
+      >
         <RouterProvider router={router} />
       </UserContext.Provider>
     </>
