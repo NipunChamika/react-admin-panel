@@ -16,8 +16,8 @@ const Menu = () => {
             </span>
             <Link to={"/"} className="no-underline">
               <div className="flex flex-row align-items-center gap-3 py-3 px-3 hover:bg-gray-200 text-base border-round-xl">
-                <i className="pi pi-home text-gray-700"></i>
-                <span className="text-gray-800">Home</span>
+                <i className="pi pi-home text-gray-700 text-xl"></i>
+                <span className="text-gray-800 font-medium">Home</span>
               </div>
             </Link>
           </div>
@@ -28,8 +28,8 @@ const Menu = () => {
             </span>
             <Link to={"/users"} className="no-underline">
               <div className="flex flex-row align-items-center gap-3 py-3 px-3 hover:bg-gray-200 text-base border-round-xl">
-                <i className="pi pi-users text-gray-700"></i>
-                <span className="text-gray-800">Users</span>
+                <i className="pi pi-users text-gray-700 text-xl"></i>
+                <span className="text-gray-800 font-medium">Users</span>
               </div>
             </Link>
           </div>
